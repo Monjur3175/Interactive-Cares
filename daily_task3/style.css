@@ -1,0 +1,95 @@
+/* Reset some defaults */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Center form container */
+form {
+  max-width: 900px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+/* Headings and note */
+h1, h2 {
+  text-align: center;
+  margin: 5px 0;
+}
+p {
+  text-align: center;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Each input group */
+form div, fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Inputs, selects, file upload */
+input[type="text"],
+input[type="file"],
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Radio buttons inline */
+input[type="radio"] {
+  margin-right: 5px;
+}
+div input[type="radio"] + label {
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* File input note */
+div p {
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+/* Submit button */
+button {
+  grid-column: span 2;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #45a049;
+}
