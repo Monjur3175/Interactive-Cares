@@ -59,7 +59,7 @@
     rgba(242, 104, 164, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  padding: 20px 0;
+  padding: 10px 2px;
   border-radius: 20px;
   text-align: center;
 }
@@ -69,7 +69,6 @@
 
 .second-menu ul li {
   display: inline-block;
-  margin-top: 10px;
 }
 
 .second-menu ul li a {
