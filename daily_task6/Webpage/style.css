@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+nav {
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: inline-block;
+  height: 100px;
+}
+ul li {
+  display: inline-block;
+  font-weight: 400;
+  padding: 15px;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  border-bottom: 2px solid transparent;
+}
+ul li a:hover {
+  border-bottom: 2px solid black;
+}
+.loginbtn a {
+  text-decoration: none;
+  padding: 5px 25px;
+}
+.signin {
+  color: black;
+}
+.signin:hover {
+  text-shadow: 0 0 8px;
+}
+.login {
+  background-color: rgb(15, 157, 218);
+  color: white;
+  border: 1px solid rgb(15, 157, 218);
+}
+.login:hover {
+  background-color: transparent;
+  border: 1px solid rgb(15, 157, 218);
+  color: rgb(15, 157, 218);  
+  box-shadow:5px 5px 5px #54B8FF;
+}
+.First-para {
+  margin-top: 40px;
+  padding: 20px 120px;
+  color: #2F2B71;
+}
+h1.Head{
+  font-size: 60px;
+  padding: 0 120px;
+  color: #5f596e;
+}
+.Second-para {
+  margin-top: 10px;
+  padding: 5px 120px;
+}
+.apply p a{
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  margin: 40px 120px;
+  padding: 10px 15px;
+  background-color: #54B8FF;
+  color: white;
+  border: 1px solid#54B8FF;
+}
+.apply p a:hover{
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  margin: 40px 120px;
+  padding: 10px 15px;
+  background-color: white;
+  color: #54B8FF;
+  border: 1px solid #54B8FF ;
+  box-shadow:5px 5px 5px #54B8FF;
+}
+.feature-image{
+  width: 600px;
+  right: .1%;
+  top: 130px;
+  position: absolute;
+}
+.dots{
+  width: 70px;
+  right: 50%;
+  top: 130px;
+  position: absolute;
+}
+.leftcircle{
+  width: 30px;
+  left: 0;
+  top: 100px;
+  position: absolute;
+}
+.rightcircle{
+  width: 60px;
+  right: 0;
+  top: 380px;
+  position: absolute;
+}
+.rightsquare{
+  width: 35px;
+  right: 0;
+  top: 100px;
+  position: absolute;
+}
+.leftlap{
+  width: 100px;
+  right: 30%;
+  top: 280px;
+  position: absolute;
+}
+.lefthead{
+  width: 100px;
+  right: 25%;
+  top: 180px;
+  position: absolute;
+}
+.headtop{
+  width: 100px;
+  right: 15%;
+  top: 100px;
+  position: absolute;
+}
+.righthead{
+  width: 100px;
+  right: 5%;
+  top: 180px;
+  position: absolute;
+}
+.rightneak{
+  width: 100px;
+  right: 3%;
+  top: 280px;
+  position: absolute;
+}
+.bottomleft{
+  width: 100px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
