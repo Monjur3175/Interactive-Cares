@@ -151,3 +151,28 @@ h1.Head{
   bottom: 0;
   position: absolute;
 }
+.one{
+  right: 41%;
+  bottom: 160px;
+  position: absolute;
+}
+.two{
+  right: 41%;
+  bottom: 81px;
+  position: absolute;
+}
+.three{
+  right: 50%;
+  bottom: 80px;
+  position: absolute;
+}
+.four{
+  right: 50%;
+  bottom: 0;
+  position: absolute;
+}
+.five{
+  right: 41%;
+  bottom: 0;
+  position: absolute;
+}
