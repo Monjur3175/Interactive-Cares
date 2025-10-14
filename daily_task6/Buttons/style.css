@@ -17,3 +17,25 @@ background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 
   border: 1px solid transparent;
   border-radius: 5px;
 }
+.tbtn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 5px 15px;
+  color: white;
+  background: #ff99e9;
+background: radial-gradient(circle, rgba(255, 153, 233, 1) 0%, rgba(128, 151, 255, 1) 100%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.frbtn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 5px 15px;
+  color: black;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+}
