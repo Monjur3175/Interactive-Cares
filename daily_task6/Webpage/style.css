@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 500;
 }
 nav {
   padding: 10px 60px;
@@ -51,25 +51,31 @@ ul li a:hover {
   box-shadow:5px 5px 5px #54B8FF;
 }
 .First-para {
+  font-size: 25px;
   margin-top: 40px;
+  font-weight: 500;
   padding: 20px 120px;
   color: #2F2B71;
 }
 h1.Head{
-  font-size: 60px;
+  font-weight: 800;
+  font-size: 70px;
   padding: 0 120px;
   color: #5f596e;
 }
 .Second-para {
+  font-size: 25px;
+  font-weight: 500;
   margin-top: 10px;
   padding: 5px 120px;
 }
 .apply p a{
   text-decoration: none;
   display: inline-block;
-  font-weight: 400;
-  margin: 40px 120px;
-  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 60px 140px;
+  padding: 20px 35px;
   background-color: #54B8FF;
   color: white;
   border: 1px solid#54B8FF;
@@ -77,9 +83,10 @@ h1.Head{
 .apply p a:hover{
   text-decoration: none;
   display: inline-block;
-  font-weight: 400;
-  margin: 40px 120px;
-  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 60px 140px;
+  padding: 20px 35px;
   background-color: white;
   color: #54B8FF;
   border: 1px solid #54B8FF ;
