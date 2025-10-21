@@ -7,16 +7,58 @@
 }
 header {
   background-color: #f6ebda;
-  background-image: url(/img/bg_img_hero.png), url(/img/bg_img_hero.png);
+  background-image: url(img/bg_img_hero.png), url(img/bg_img_hero.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 500px, 500px;
   background-position: top right, bottom left;
   padding-bottom: 400px;
 }
+
+/* Make background responsive */
+@media (max-width: 768px) {
+  header {
+    background-size: 300px, 300px;
+    padding-bottom: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    background-size: 200px, 200px;
+    padding-bottom: 100px;
+  }
+}
 nav {
   display: flex;
   justify-content: space-around;
   padding: 30px 50px;
+}
+
+/* Make navigation responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .search-box {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .icons_cart {
+    position: static;
+    margin: 0;
+  }
 }
 ul {
   list-style: none;
@@ -89,6 +131,25 @@ p {
   border-radius: 30px;
   margin-bottom: 40px;
   font-size: 20px;
+}
+
+/* Base responsive styles for all screen sizes */
+@media (max-width: 1200px) {
+  h1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 42px;
+    margin-top: 50px;
+  }
+  
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .order {
+    margin-left: 20px;
+  }
 }
 .order:hover {
   text-decoration: none;
@@ -196,6 +257,16 @@ p {
   position: absolute;
   left: 305px;
   top: 800px;
+}
+
+/* Make cards responsive */
+@media (max-width: 1200px) {
+  .card1, .card2, .card3 {
+    position: static;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 350px;
+  }
 }
 .card1 .card-text {
   position: relative;
@@ -374,6 +445,39 @@ p {
   top: 1400px;
 }
 
+/* Make delivery section responsive */
+@media (max-width: 1200px) {
+  .delivery-card {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .firstdev, .seconddev, .thirddev {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .firstdev img, .seconddev img, .thirddev img {
+    left: 0;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .firstdev h1, .seconddev h1, .thirddev h1 {
+    right: 0;
+    font-size: 20px;
+  }
+  
+  .firstdev p, .seconddev p, .thirddev p {
+    right: 0;
+    font-size: 16px;
+  }
+}
+
 .howto {
   color: black;
   font-size: 32px;
@@ -431,4 +535,126 @@ p {
   right: 35px;
   bottom: 80px;
   color:black;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-img {
+    display: none;
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    margin-top: 50px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .order {
+    padding: 8px 30px;
+    font-size: 16px;
+  }
+  
+  .more {
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  .card1, .card2, .card3 {
+    width: 90%;
+    max-width: 350px;
+  }
+  
+  .popular h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .howto {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  .order {
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+  
+  .more {
+    font-size: 14px;
+    padding: 15px;
+  }
+  
+  .card1, .card2, .card3 {
+    width: 95%;
+  }
+  
+  .popular h1 {
+    font-size: 20px;
+  }
+  
+  .howto {
+    font-size: 20px;
+  }
+}
+
+/* Fix horizontal scroll issue */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+header {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure all containers respect viewport width */
+* {
+  max-width: 100%;
+}
+
+/* Fix specific elements that might cause overflow */
+.hero-img {
+  max-width: 100%;
+}
+
+.cards {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.delivery-card {
+  max-width: 100%;
+  overflow-x: hidden;
 }
