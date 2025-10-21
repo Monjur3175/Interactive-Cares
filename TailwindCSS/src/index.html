@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <h2 class="text-center bg-amber-100 selection:bg-green-900">
+      Hello Tailwind
+    </h2>
+    <nav class="mt-5 bg-amber-400 flex justify-between">
+      <p class="ml-15 text-[#556688]">Tailwind</p>
+      <ul class="flex gap-3 justify-between">
+        <li class="text-blue-800 hover:bg-green-400 hover:text-red-500">Home</li>
+        <li class="text-blue-800">About</li>
+        <li class="text-blue-800">Team</li>
+        <li class="text-blue-800">Contact</li>
+        <li class="text-blue-800">Service</li>
+      </ul>
+    </nav>
+    <div class="min-h-screen flex flex-col md:flex-row">
+        <aside class="bg-gray-800 text-white w-full md:w-1/4 p-6">
+            <h2 class="text-xl font-bold mb-4">Sidebar</h2>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" class="hover:text-gray-300">DashBoard</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gray-300">Profile</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gray-300">Settings</a>
+                </li>
+            </ul>
+        </aside>
+          <main class="flex-1 bg-gray-100 p-6">
+            <h1 class="text-2xl font-semibold mb-[13px] text-center">main content</h1>
+        <p class="text-gray-700">this is the main area,on larger scren,it's dispalyed beside sidebar,on smaller screens,it appears below</p>  
+        
+    </main> 
+    </div>
+  </body>
+</html>
