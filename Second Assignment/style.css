@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  background-color: #f3fcf7;
+  height: 75vh;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+nav li {
+  margin: 1.875rem 2.5rem;
+  padding: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 0.125rem solid transparent;
+}
+nav h3 {
+  float: left;
+  margin-left: 1.875rem;
+  padding: 1.25rem 3.125rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #06c167;
+}
+nav li:hover {
+  color: #06c167;
+  border-bottom: 2px solid #06c167;
+}
+.content {
+  display: flex;
+}
+.content .text h1 {
+  font-size: 4.6875rem;
+  font-weight: 700;
+  margin-top: 6.25rem;
+  margin-left: 10rem;
+}
+.content .text p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1.25rem 10rem;
+  color: #555555;
+}
+.content .text a {
+  display: inline-block;
+  background-color: #06c167;
+  color: white;
+  text-decoration: none;
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 1.875rem;
+  margin-left: 10rem;
+}
+.content .text a i {
+  margin-left: 0.9375rem;
+}
+
+.pucchi {
+  width: 20rem;
+  position: relative;
+  left: 15rem;
+  top: 3rem;
+}
+.rating1 {
+  position: absolute;
+  right: 33%;
+  top: 45%;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 3.125rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+}
+.rating2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  right: 8%;
+  top: 35%;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 3.125rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.rating1 i {
+  color: #05a256;
+  margin-left: 0.3125rem;
+}
+.logo1 {
+  position: relative;
+  left: 6.875rem;
+  margin: 1.25rem 3.125rem;
+  width: 12.5rem;
+}
+.logo {
+  margin-bottom: 100px;
+}
+.support {
+  width: 75%;
+  margin-left: 12.5%;
+}
+.support .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  border-top: 2px solid #707070;
+  border-bottom: 2px solid #707070;
+}
+.support .cards .card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3.125rem 3.75rem;
+}
+.support .cards .card h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.support .cards .card p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: #f3fcf700;
+}
+.benefit {
+  display: flex;
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+.benefit .benefit-img {
+  background-color: #f3fafb;
+  padding: 0 7rem;
+  padding-bottom: 5rem;
+  width: 40rem;
+}
+.benefit .benefit-text {
+  margin: 5rem 12.5rem;
+}
+.benefit .benefit-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.benefit .benefit-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555555;
+  margin-bottom: 2.5rem;
+  line-height: 1.75rem;
+}
+.benefit .benefit-text li {
+  list-style: none;
+  padding: 0.9375rem 0;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.benefit .benefit-text li i {
+  color: #06c167;
+}
+
+.stars {
+  margin-top: 10rem;
+  display: flex;
+}
+.star-text a {
+  display: inline-block;
+  background-color: #06c167;
+  color: white;
+  text-decoration: none;
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 1.875rem;
+  margin-left: 10rem;
+}
+.star-text a i {
+  margin-left: 0.9375rem;
+}
+.star-text h1 {
+  font-size: 4.6875rem;
+  font-weight: 700;
+  margin-top: 6.25rem;
+  margin-left: 10rem;
+}
+.star-text h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.25rem 10rem;
+  color: #555555;
+}
+.stars .star-text .tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 40%;
+  margin: 3rem 10rem;
+}
+.stars .star-text .tiles .tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tile h4 {
+  font-size: 2rem;
+  font-size: 2rem;
+  color: #06c167;
+}
+.tile p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #555555;
+  margin-top: 0.625rem;
+}
+.star-img1 {
+  background-color: #f3fafb;
+  width: 35rem;
+  padding: 0rem 0rem 8rem 8rem;
+  margin-left: 10rem;
+}
+.features-text h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5rem;
+}
+.features-text p {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem 0;
+}
+.features .boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 80%;
+  margin-left: 10%;
+  justify-content: center;
+}
+.features .boxes .box {
+  background-color: #f3fcf7;
+  border: 1px solid #06c167;
+}
+.box-text {
+  padding: 1.875rem;
+}
+.box-text a i {
+  margin-left: 0.9375rem;
+}
+.features .boxes .box img {
+  width: 100%;
+  height: 100%;
+}
+.box-text h1 {
+  margin-bottom: 2rem;
+}
+.box-text p {
+  margin-bottom: 2rem;
+}
+.box-text a {
+  display: inline-block;
+  background-color: #e6f9f0;
+  color: #06c167;
+  text-decoration: none;
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 1.875rem;
+}
+.product-text h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+.product-text p {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-left: 10rem;
+}
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: 5% 10%;
+  justify-items: center;
+}
+.product-card {
+  padding: 2rem;
+  border: 1px solid #06c167;
+}
+.product-info {
+  text-align: center;
+}
+.product-info i {
+  color: #06c167;
+  margin-bottom: 0.625rem;
+  margin-left: 1rem;
+}
+.product-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.product-info a {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #06c167;
+  border: 1px solid #06c167;
+  text-decoration: none;
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 1.875rem;
+}
+.last {
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-left: 10%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url("/src/12th image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  background-position: center;
+  padding: 10rem;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.last a {
+  display: inline-block;
+  background-color: #06c167;
+  color: white;
+  text-decoration: none;
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 1.875rem;
+}
+.last a i {
+  margin-left: 0.9375rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width:80%;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.col-brand h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #06c167;
+  margin-bottom: 1rem;
+}
+.col-brand p,
+.col-contact > p {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+  max-width: 20rem;
+}
+.social-icons a {
+  color: var(--text-medium);
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+.social-icons a:hover {
+  color: #06c167;
+}
+
+.col-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.75;
+}
+.col-links a {
+  font-size: 0.875rem;
+  color: var(--text-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.col-links a:hover {
+  color: var(--brand-green);
+}
+
+.subscription-form {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+.subscription-form input[type="email"] {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+.subscription-form button {
+  background-color: #06c167;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+.subscription-form button:hover {
+  background-color: #179e43;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.copyright p {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+}
