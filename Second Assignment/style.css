@@ -469,18 +469,18 @@ nav li:hover {
   margin-top: 1.6rem;
   font-size: 0.7rem;
 }
-/*@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .textmobile {
     display: block;
     text-align: center;
     justify-content: center;
   }
-  .textmobile >h1{
+  .textmobile > h1 {
     font-size: 3rem;
     font-weight: 500;
     margin-top: 5rem;
   }
-  .text{
+  .text {
     display: none;
   }
   nav h3 {
@@ -495,29 +495,29 @@ nav li:hover {
     margin-left: 20rem;
   }
   .content .text h1 {
-  font-size: 3.75rem;
-  font-weight: 700;
-  margin-top: 5rem;
-  margin: 0 auto;
-}
-.content .text p {
-  font-size: 0.8rem;
-  font-weight: 400;
-  margin: 1rem 8rem;
-  color: #555555;
-}
-.content .text a {
-  display: inline-block;
-  background-color: #06c167;
-  color: white;
-  text-decoration: none;
-  padding: 1rem 1.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 1.5rem;
-  margin-left: 8rem;
-}
+    font-size: 3.75rem;
+    font-weight: 700;
+    margin-top: 5rem;
+    margin: 0 auto;
+  }
+  .content .text p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 1rem 8rem;
+    color: #555555;
+  }
+  .content .text a {
+    display: inline-block;
+    background-color: #06c167;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-left: 8rem;
+  }
   .pucchi {
     width: 16rem;
     position: relative;
@@ -547,5 +547,4 @@ nav li:hover {
     font-size: 1rem;
     font-weight: 500;
   }
-}
-*/
+} */
