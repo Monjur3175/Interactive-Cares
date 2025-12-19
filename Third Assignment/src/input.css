@@ -1,29 +1,67 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: Google Sans;
-    src: url("../src/Fonts/GoogleSans-Regular.ttf");
+  font-family: Google Sans;
+  src: url("../src/Fonts/GoogleSans-Regular.ttf");
 }
-@theme{
-    --font-google: Google Sans,"sans-serif";
-    --breakpoint-md:838px;
-    --breakpoint-md-hero:986px;
-    --breakpoint-md-skill:690px;
+@theme {
+  --font-google: Google Sans, "sans-serif";
+  --breakpoint-md: 838px;
+  --breakpoint-md-hero: 986px;
+  --breakpoint-md-skill: 690px;
 }
 @layer components {
-    .btn{
-        background-color: #d5fbe2;
-        padding: 1rem 1.5rem;
-        border-radius: 20px;
+  .btn {
+    background-color: #d5fbe2;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+  }
+  .container {
+    margin: 2.5rem auto;
+    padding: 0.5rem;
+    text-align: justify;
+    background-color: oklch(96.2% 0.018 272.314);
+    border-radius: 1rem;
+  }
+  .container:hover {
+    background-color: oklch(87% 0.065 274.039);
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 50;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem; /* p-4 */
+
+    background-color: rgba(0, 31, 63, 0.8); /* bg-[#001f3f]/80 */
+    backdrop-filter: blur(8px); /* backdrop-blur */
+
+    color: #ffffff;
+  }
+  .foot {
+    background-color: #001f3f;
+
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+
+    padding-top: 3rem; /* py-12 */
+    padding-bottom: 3rem;
+
+    color: #ffffff;
+  }
+  /* max-md:block → applies at screen ≤ 768px */
+  @media (max-width: 986px) {
+    .navbar {
+      display: block;
     }
-    .container{
-        margin: 2.5rem;
-        padding:0.5rem;
-        text-align:justify;
-        background-color: oklch(96.2% 0.018 272.314);
-        border-radius: 1rem;
+    .foot{
+        text-align: center;
     }
-    .container:hover{
-        background-color: oklch(87% 0.065 274.039);    
-    }
+  }
 }
