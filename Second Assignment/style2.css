@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -48,11 +48,11 @@ nav li:hover {
   border-bottom: 0.16rem solid #06c167;
 }
 
-
+*/
 
 .img{
     /* border: 1px solid red; */
-}
+}/*
 .textmobile {
   display: none;
 }
@@ -114,6 +114,4 @@ nav li:hover {
    
 
 
-
-
-}
+*/
