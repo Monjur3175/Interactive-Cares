@@ -228,6 +228,15 @@
   .m-10 {
     margin: calc(var(--spacing) * 10);
   }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-5 {
+    margin-inline: calc(var(--spacing) * 5);
+  }
+  .mx-10 {
+    margin-inline: calc(var(--spacing) * 10);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -432,9 +441,6 @@
   }
   .text-amber-600 {
     color: var(--color-amber-600);
-  }
-  .text-black {
-    color: var(--color-black);
   }
   .text-blue-400 {
     color: var(--color-blue-400);
@@ -681,7 +687,7 @@
     border-radius: 20px;
   }
   .container {
-    margin: 2.5rem;
+    margin: 2.5rem auto;
     padding: 0.5rem;
     text-align: justify;
     background-color: oklch(96.2% 0.018 272.314);
@@ -714,9 +720,11 @@
   @media (max-width: 986px) {
     .navbar {
       display: block;
+      width: 100vw;
     }
     .foot {
       text-align: center;
+      width: 100vw;
     }
   }
 }
