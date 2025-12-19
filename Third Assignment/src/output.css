@@ -436,6 +436,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[\#4a90e2\] {
+    color: #4a90e2;
+  }
   .text-amber-400 {
     color: var(--color-amber-400);
   }
