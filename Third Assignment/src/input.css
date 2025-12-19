@@ -59,9 +59,11 @@
   @media (max-width: 986px) {
     .navbar {
       display: block;
+      width: 100vw;
     }
     .foot{
         text-align: center;
+        width: 100vw;
     }
   }
 }
