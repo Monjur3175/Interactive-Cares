@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Project</title>
+    <!-- Stylesheet  -->
+    <link href="./src/output.css" rel="stylesheet" />
+    <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav>
+      <img class="mx-auto my-5" width="150" src="/images/logo.png" alt="logo" />
+    </nav>
+    <div
+      class="bg-[url('/images/page-title.jpg')] w-full bg-cover bg-center-top bg-no-repeat text-center text-white text-6xl font-bold p-52"
+    >
+      Search your <br />
+      Favourite Recipe
+      <p class="text-xl font-normal">
+        A handful of simple ingredients typify the fresh, varient <br />
+        flavors of Greek cooking
+      </p>
+    </div>
+    
+    <div class="flex justify-center">
+        <input type="text" class="outline-yellow-300 border-2 px-2 border-gray-400 my-5 w-2xl rounded-l-lg py-2" placeholder="Search" id="Search">
+        <a class="outline-yellow-300 border-2 px-2 border-gray-400 my-5 bg-amber-400 hover:border-blue-600 rounded-r-lg py-2" onclick="fetchData()"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+    <h2 class="text-center text-4xl my-5">Latest Recipes</h2>
+    <div id="getdata">
+      
+    </div>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
