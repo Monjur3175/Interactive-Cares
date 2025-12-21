@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API Project</title>
+    <title>Thalix</title>
     <!-- Stylesheet  -->
     <link href="./src/output.css" rel="stylesheet" />
     <!-- font-awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
   </head>
   <body>
+    <button id="topbtn" class="bg-amber-400 p-2 fixed bottom-2 right-2 cursor-pointer z-40"><i class="fa-solid fa-arrow-up"></i></button>
     <nav>
       <img class="mx-auto my-5" width="150" src="/images/logo.png" alt="logo" />
     </nav>
@@ -23,15 +26,36 @@
         flavors of Greek cooking
       </p>
     </div>
+      <div class="flex justify-center">
+        <input type="text" id="searchInput" class="outline-yellow-300 border-2 px-2 border-gray-400 my-5 w-2xl rounded-l-lg py-2 hover:border-gray-800" placeholder="Search">
+        <a id="searchBtn" class="outline-yellow-300 border-2 px-2 border-gray-400 my-5 bg-amber-400 hover:border-blue-600 rounded-r-lg py-2" ><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+        
+            <h2 class="text-center text-4xl my-5">Latest Recipes</h2>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl">
+            <div id="mealGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="col-span-full text-center py-10 text-gray-600 text-xl">
+                    Search for meals to get started...
+                </div>
+            </div>
+        </div>
+    </div>
     
-    <div class="flex justify-center">
-        <input type="text" class="outline-yellow-300 border-2 px-2 border-gray-400 my-5 w-2xl rounded-l-lg py-2" placeholder="Search" id="Search">
-        <a class="outline-yellow-300 border-2 px-2 border-gray-400 my-5 bg-amber-400 hover:border-blue-600 rounded-r-lg py-2" onclick="fetchData()"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <div id="mealModal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 overflow-y-auto p-5">
+        <div class="relative max-w-4xl mx-auto my-12">
+            <div 
+                id="closeModal"
+                class="absolute right-5 top-5 text-white text-3xl cursor-pointer bg-black bg-opacity-50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-70 z-10"
+            >
+                &times;
+            </div>
+            <div id="modalContent" class="bg-white rounded-2xl overflow-hidden">
+            </div>
+        </div>
     </div>
-    <h2 class="text-center text-4xl my-5">Latest Recipes</h2>
-    <div id="getdata">
-      
-    </div>
+    <footer>
+      <div class="text-center bg-gray-400 border-t-2">&copy;All Rights Reserved</div>
+    </footer>
     <script src="/src/script.js"></script>
-  </body>
+</body>
 </html>
