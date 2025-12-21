@@ -1,32 +1,26 @@
-// Meal Finder App
 const apiUrl = "https://www.themealdb.com/api/json/v1/1";
 let meals = [];
 
-// Get all the elements we need
 const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
 const mealGrid = document.getElementById("mealGrid");
 const modal = document.getElementById("mealModal");
 const closeBtn = document.getElementById("closeModal");
 
-// Load random meals when page loads
 window.addEventListener('DOMContentLoaded', function() {
   loadRandomMeals();
 });
 
-// Search button click
 searchBtn.addEventListener("click", function() {
   searchMeals();
 });
 
-// Press enter to search
 searchInput.addEventListener("keypress", function(e) {
   if (e.key === "Enter") {
     searchMeals();
   }
 });
 
-// Close modal
 closeBtn.addEventListener("click", function() {
   modal.classList.add("hidden");
 });
@@ -37,7 +31,6 @@ modal.addEventListener("click", function(e) {
   }
 });
 
-// Function to fetch from API
 async function fetchFromAPI(endpoint) {
   try {
       
@@ -52,7 +45,6 @@ async function fetchFromAPI(endpoint) {
   }
 }
 
-// Search for meals
 async function searchMeals() {
   const term = searchInput.value.trim();
   
@@ -78,11 +70,9 @@ async function searchMeals() {
   }
 }
 
-// Load random meals
 async function loadRandomMeals() {
   let randomMeals = [];
   
-  // Get 8 random meals
   for (let i = 0; i < 8; i++) {
     const data = await fetchFromAPI("random.php");
     if (data && data.meals) {
@@ -94,7 +84,6 @@ async function loadRandomMeals() {
   showMeals();
 }
 
-// Display meals on the page
 function showMeals() {
   if (!meals || meals.length === 0) {
     mealGrid.innerHTML = '<div class="col-span-full text-center py-10 text-gray-600">No meals to show</div>';
@@ -124,11 +113,9 @@ function showMeals() {
   });
 }
 
-// Show meal details in modal
 function showModal(meal) {
   const modalContent = document.getElementById("modalContent");
   
-  // Get all ingredients
   let ingredientsList = [];
   for (let i = 1; i <= 20; i++) {
     const ingredient = meal["strIngredient" + i];
@@ -142,7 +129,6 @@ function showModal(meal) {
     }
   }
 
-  // Build the ingredients HTML
   let ingredientsHTML = "";
   ingredientsList.forEach(function(ing) {
     ingredientsHTML += `
@@ -153,7 +139,6 @@ function showModal(meal) {
     `;
   });
 
-  // Split instructions into paragraphs
   let instructions = meal.strInstructions.split("\r\n");
   let instructionsHTML = "";
   instructions.forEach(function(step) {
@@ -205,7 +190,6 @@ function showModal(meal) {
   modal.classList.remove("hidden");
 }
 
-// Scroll to top button
 const topBtn = document.getElementById("topbtn");
 
 window.onscroll = function() {
