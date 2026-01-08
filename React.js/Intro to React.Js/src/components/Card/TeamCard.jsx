@@ -12,16 +12,10 @@ import { Link } from "react-router-dom";
 
 
 export default function TeamCard({team}) {
-    console.log(team);
   return (
     <Grid size={4}>
       <Card sx={{ maxWidth: 345,height:800 }}>
         <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
         title={team.strTeam}
         subheader={`${team.strAlternate},${team.strLocation}`}
       />

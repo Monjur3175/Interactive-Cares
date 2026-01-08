@@ -12,7 +12,7 @@ function App() {
       <Route path='/' element= {<Home />}/>
       <Route path='/leagues' element= {<Home />}/>
       <Route path='/leagues/:name' element= {<Leagues />}/>
-      <Route path='/leagues/:name/:team' element= {<Teams />}/>
+      <Route path='/leagues/:leagueName/:teamId' element={<Teams />} />
       <Route path='/services' element= {<Services />}/>
       <Route path='/contact' element= {<Contact />}/>
     </Routes>

@@ -6,12 +6,9 @@ import { CircularProgress } from "@mui/material";
 import TeamCard from "../../components/Card/TeamCard";
 import { Grid } from "@mui/material";
 const leagues = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { name } = useParams();
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [LeagueData, SetLeagueData] = useState([]);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     const leagueData = async () => {
       try {
