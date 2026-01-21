@@ -3,12 +3,11 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
+
 
 
 export default function TeamCard({team}) {
@@ -17,7 +16,7 @@ export default function TeamCard({team}) {
       <Card sx={{ maxWidth: 345,height:800 }}>
         <CardHeader
         title={team.strTeam}
-        subheader={`${team.strAlternate},${team.strLocation}`}
+        subheader={`${team.strTeamAlternate},${team.strLocation}`}
       />
       <CardMedia
         component="img"
@@ -34,7 +33,7 @@ export default function TeamCard({team}) {
           
         </CardContent>
         <CardActions>
-          <Link to={`/leagues/${team.strTeam}/${team.stridTeam}`}>
+          <Link to={`/leagues/${team.strTeam}/${team.idTeam}`}>
             <Button size="small">See Details</Button>
           </Link>
         </CardActions>

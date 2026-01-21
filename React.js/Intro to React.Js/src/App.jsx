@@ -1,10 +1,10 @@
 import { Routes,Route } from "react-router-dom";
 import './App.css';
-import Home from "./pages/homepage/home";
-import Services from "./pages/services/services";
-import Teams from "./pages/teams/teams";
-import Leagues from "./pages/leagues/leagues";
-import Contact from "./pages/contact/contact";
+import Home from "./pages/Homepage/Home";
+import Services from "./pages/Services/Services";
+import Teams from "./pages/Teams/Teams";
+import Leagues from "./pages/Leagues/Leagues";
+import Contact from "./pages/Contact/Contact";
 function App() {
   
   return (
@@ -12,7 +12,7 @@ function App() {
       <Route path='/' element= {<Home />}/>
       <Route path='/leagues' element= {<Home />}/>
       <Route path='/leagues/:name' element= {<Leagues />}/>
-      <Route path='/leagues/:leagueName/:teamId' element={<Teams />} />
+      <Route path='/leagues/:name/:team' element={<Teams />} />
       <Route path='/services' element= {<Services />}/>
       <Route path='/contact' element= {<Contact />}/>
     </Routes>

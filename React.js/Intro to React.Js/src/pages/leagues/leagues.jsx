@@ -5,9 +5,9 @@ import { useEffect } from "react";
 import { CircularProgress } from "@mui/material";
 import TeamCard from "../../components/Card/TeamCard";
 import { Grid } from "@mui/material";
-const leagues = () => {
+const Leagues = () => {
   const { name } = useParams();
-  const [LeagueData, SetLeagueData] = useState([]);
+  const [leagueDetails, setLeagueDetails] = useState([]);
 
   useEffect(() => {
     const leagueData = async () => {
@@ -17,7 +17,7 @@ const leagues = () => {
         );
         const response = await league.json();
         const data = await response.teams;
-        SetLeagueData(data);
+        setLeagueDetails(data);
       } catch (err) {
         console.log(err);
       }
@@ -27,16 +27,18 @@ const leagues = () => {
   return (
     <div>
       <Navbar />
-      <h2>Total Teams {LeagueData.length}</h2>
+      <h2>Total Teams {leagueDetails.length}</h2>
       <Grid container spacing={2}>
-        {LeagueData.length > 0 ? 
-          LeagueData.map(team => <TeamCard key={team.idTeam} team={team} />)
-        : 
+        {leagueDetails.length > 0 ? (
+          leagueDetails.map((team) => (
+            <TeamCard key={team.idTeam} team={team} />
+          ))
+        ) : (
           <CircularProgress />
-        }
+        )}
       </Grid>
     </div>
   );
 };
 
-export default leagues;
+export default Leagues;
