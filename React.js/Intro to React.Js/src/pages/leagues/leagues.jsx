@@ -12,10 +12,10 @@ const Leagues = () => {
   useEffect(() => {
     const leagueData = async () => {
       try {
-        const league = await fetch(
+        const team = await fetch(
           `https://www.thesportsdb.com/api/v1/json/123/search_all_teams.php?l=${name}`
         );
-        const response = await league.json();
+        const response = await team.json();
         const data = await response.teams;
         setLeagueDetails(data);
       } catch (err) {

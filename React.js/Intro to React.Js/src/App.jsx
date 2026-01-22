@@ -2,7 +2,7 @@ import { Routes,Route } from "react-router-dom";
 import './App.css';
 import Home from "./pages/Homepage/Home";
 import Services from "./pages/Services/Services";
-import Teams from "./pages/Teams/Teams";
+import Teams from "./pages/teams/teams";
 import Leagues from "./pages/Leagues/Leagues";
 import Contact from "./pages/Contact/Contact";
 function App() {
