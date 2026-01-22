@@ -10,7 +10,7 @@ const Leagues = () => {
   const [leagueDetails, setLeagueDetails] = useState([]);
 
   useEffect(() => {
-    const leagueData = async () => {
+    const teamData = async () => {
       try {
         const team = await fetch(
           `https://www.thesportsdb.com/api/v1/json/123/search_all_teams.php?l=${name}`
@@ -22,7 +22,7 @@ const Leagues = () => {
         console.log(err);
       }
     };
-    leagueData();
+    teamData();
   }, [name]);
   return (
     <div>

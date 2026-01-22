@@ -1,7 +1,7 @@
+import { Card, CardContent, CardHeader, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 
 export default function playerCard({ player }) {
-  console.log(player);
   return (
     <Grid size={4}>
       <Card sx={{ maxWidth: 345, height: 800 }}>
