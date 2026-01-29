@@ -4,16 +4,18 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SignUp from "./pages/SignUp/SignUp";
+import AuthProvider from "./context/AuthProvider";
 function App() {
   return (
-    
-    <Routes>
+    <AuthProvider>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
+    </AuthProvider>
   );
 }
 
