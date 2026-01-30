@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import useCredential from "../hooks/useCredential";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {

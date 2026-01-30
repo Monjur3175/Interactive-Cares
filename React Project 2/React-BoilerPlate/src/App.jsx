@@ -5,6 +5,8 @@ import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SignUp from "./pages/SignUp/SignUp";
 import AuthProvider from "./context/AuthProvider";
+import PrivateOutlet from "./component/PrivateOutlet";
+import NotFound from "./component/NotFound";
 function App() {
   return (
     <AuthProvider>
@@ -13,7 +15,10 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<PrivateOutlet />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
       </Routes>
     </AuthProvider>
   );

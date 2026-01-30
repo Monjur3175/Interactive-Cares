@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../component/Navbar";
 import { useForm } from "react-hook-form";
 import userData from "../../Data/user.json";
 import useAuth from "../../hooks/useAuth";
+import { useLocation, useNavigate } from "react-router";
 export default function Login() {
-  const { user,setUser } = useAuth();
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
+  const { user, setUser } = useAuth();
+  useEffect(() => {
+    user?.email && navigate(from, { replace: true });
+  }, [from, navigate, user?.email]);
   const [LoginError, setLoginError] = useState("");
 
   const {
@@ -18,7 +26,7 @@ export default function Login() {
     const fetchData = async () => {
       try {
         const tempUser =
-          await userData.find(
+          userData.find(
             (user) =>
               user.email === FormData.email &&
               user.password === FormData.password,
