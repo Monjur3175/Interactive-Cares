@@ -5,8 +5,8 @@ import useCredential from "../hooks/useCredential";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const allContext = useCredential();
-  return (
+ const allContext = useCredential();
+    return (
     <AuthContext.Provider value={allContext}>
       {children}
     </AuthContext.Provider>
