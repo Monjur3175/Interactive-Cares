@@ -1,8 +1,23 @@
 [
-    {
-        "_id":"Mjms",
-        "email":"monjurmorshedosama75@gmail.com",
-        "password":"monjur123",
-        "name":"Monjur"
-    }
+  {
+    "_id": "Mjms",
+    "email": "monjurmorshedosama75@gmail.com",
+    "password": "monjur123",
+    "name": "Monjur",
+    "role": "admin"
+  },
+  {
+    "_id": "xav",
+    "email": "xavieritsolution@gmail.com",
+    "password": "xavier123",
+    "name": "Xavier",
+    "role": "user"
+  },
+  {
+    "_id": "kur",
+    "email": "Kurgen214@gmail.com",
+    "password": "kurgen123",
+    "name": "Kurgen",
+    "role": "staff"
+  }
 ]

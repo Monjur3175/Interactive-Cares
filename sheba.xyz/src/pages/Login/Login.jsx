@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import { useForm } from "react-hook-form";
-import userData from "../../Data/FakeData.json";
 import useAuth from "../../hooks/useAuth";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 export default function Login() {
   let navigate = useNavigate();
   let location = useLocation();
@@ -23,29 +22,41 @@ export default function Login() {
 
   const onSubmit = (data) => processLogin(data);
   const processLogin = (FormData) => {
+    const loginBtn = document.getElementById("loginBtn");
+    loginBtn.disabled = true;
+    loginBtn.innerText = "Processing Login...";
+
     const fetchData = async () => {
       try {
-        const tempUser =
-          userData.find(
-            (user) =>
-              user.email === FormData.email &&
-              user.password === FormData.password,
-          ) || {};
-
-        if (tempUser.email) {
-          setUser(tempUser);
-          localStorage.setItem("uId", tempUser._id);
+        const response = await fetch("https://sheba-xyz.onrender.com/user", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(FormData),
+        });
+        const result = await response.json();
+        if (response.status) {
+          setUser(result.user);
           setLoginError("");
+          localStorage.setItem("uId", result.user._id);
+          result.user.role === "user" && navigate("/services");
+          result.user.role === "admin" && navigate("/admin");
         } else {
-          setLoginError("User Email or Password does not match");
+          setLoginError(result.message);
+          document.getElementById("loginForm").reset();
+          loginBtn.disabled = false;
+          loginBtn.innerText = "Login";
         }
-        document.getElementById("loginForm").reset();
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
     };
     fetchData();
   };
+  function handleError() {
+    setLoginError("");
+  }
   return (
     <div className="">
       <Navbar />
@@ -53,6 +64,7 @@ export default function Login() {
         <form onSubmit={handleSubmit(onSubmit)} id="loginForm">
           <div className="my-2">
             <input
+              onChangeCapture={handleError}
               type="text"
               className="w-full p-2 border border-emerald-600 focus:border-emerald-800 rounded"
               placeholder="Enter Your Email"
@@ -64,6 +76,7 @@ export default function Login() {
           </div>
           <div className="my-2">
             <input
+              onChangeCapture={handleError}
               type="password"
               className="w-full p-2 border border-emerald-600 focus:border-emerald-800 rounded"
               placeholder="Enter Your Password"
@@ -74,12 +87,18 @@ export default function Login() {
             )}
           </div>
 
-          <input
+          <button
             className="bg-green-400 hover:bg-green-800 text-white w-full rounded-md py-2"
             type="submit"
-          />
+            id="loginBtn"
+          >
+            Login
+          </button>
         </form>
-        <p className="text-rose-700">{LoginError}</p>
+        <p className="text-rose-700 mt-2 font-bold">{LoginError}</p>
+        <p>
+          Don't Have an Account <Link to="/signup" className="underline">Register as User</Link>
+        </p>
       </div>
     </div>
   );

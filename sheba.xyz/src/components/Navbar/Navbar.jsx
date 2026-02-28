@@ -32,7 +32,7 @@ export default function Navbar() {
             Staffs
           </NavLink>
 
-          {user.email ? (
+          {user?.email ? (
             <>
               {user.role === "user" && (
                 <NavLink

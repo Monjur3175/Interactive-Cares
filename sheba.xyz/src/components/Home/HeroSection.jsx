@@ -2,7 +2,7 @@ import React from "react";
 import "../../../src/App.css";
 export default function HeroSection() {
   return (
-    <div className="flex content-normal items-center hero-bg bg-no-repeat bg-center bg-cover h-[450px] w-full">
+    <div className="flex content-normal items-center hero-bg bg-no-repeat bg-center bg-cover h-112.5 w-full">
       <div className="w-full">
         <h1 className="text-6xl font-bold text-black text-center">
           Your Personal Assistant
