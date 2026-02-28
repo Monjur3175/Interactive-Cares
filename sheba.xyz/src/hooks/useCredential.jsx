@@ -2,27 +2,57 @@ import { useEffect, useState } from "react";
 const useCredential = () => {
   const id = localStorage.getItem("uId");
   const [user, setUser] = useState({});
+  const [services, setServices] = useState([]);
+  const [categories, setCategories] = useState([]);
+
   const userData = async () => {
     try {
-      const response = await fetch(`https://sheba-xyz.onrender.com/users/${id}`);
+      const response = await fetch(`http://localhost:3000/users/${id}`);
       const result = await response.json();
       result.status && setUser(result.user);
     } catch (error) {
       console.error(error);
     }
   };
+
   useEffect(() => {
-    if (id) {
-      userData();
-    } else {
-      setUser({});
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/categories`);
+        const result = await response.json();
+        setCategories(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
   }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/services`);
+        const result = await response.json();
+        setServices(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   const logout = () => {
     localStorage.removeItem("uId");
     setUser({});
   };
-  return { user, setUser, userData, logout };
+  return {
+    user,
+    setUser,
+    userData,
+    logout,
+    services,
+    setServices,
+    categories,
+    setCategories,
+  };
 };
 export default useCredential;

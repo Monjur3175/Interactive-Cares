@@ -1,0 +1,165 @@
+{
+  "status": true,
+  "users": [
+    {
+      "_id": "67b1e5da45be8ad8a4310a2e",
+      "name": "Eftykhar Rahman",
+      "email": "eftykharrahman@gmail.com",
+      "password": "2025",
+      "role": "user",
+      "id": "bff3"
+    },
+    {
+      "_id": "67b1ea839bb4c0dfdfd742f8",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "admin",
+      "id": "995e"
+    },
+    {
+      "_id": "67bb34d8674c87cd4e5b205d",
+      "name": "Nahid",
+      "email": "nahid@gmail.com",
+      "password": "1234",
+      "role": "user",
+      "id": "7350"
+    },
+    {
+      "_id": "67bb3587053dfeb669cb0fb4",
+      "name": "Nasim",
+      "email": "nasim@gmail.com",
+      "password": "1234",
+      "role": "user",
+      "id": "7d92"
+    },
+    {
+      "_id": "67d25c7644cff6ba5503d65c",
+      "name": "Eftykhar",
+      "email": "eftykhar@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "id": "7332"
+    },
+    {
+      "_id": "68065846400f5d27e7b0cf54",
+      "name": "Tapan",
+      "email": "tapan@gmail.com",
+      "password": "1234",
+      "role": "staff",
+      "id": "41ee"
+    },
+    {
+      "_id": "6806589f400f5d27e7b0cf55",
+      "name": "Staff 1",
+      "email": "staff1@gmail.com",
+      "password": "1234",
+      "role": "staff",
+      "id": "f0f5"
+    },
+    {
+      "_id": "6806593c400f5d27e7b0cf56",
+      "name": "Staff 2",
+      "email": "staff2@gmail.com",
+      "password": "1234",
+      "role": "staff",
+      "id": "8884"
+    },
+    {
+      "_id": "68065a14400f5d27e7b0cf57",
+      "name": "Staff 3",
+      "email": "staff3@gmail.com",
+      "password": "1234",
+      "role": "staff",
+      "id": "fee1"
+    },
+    {
+      "_id": "68065a56400f5d27e7b0cf58",
+      "name": "sdf",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "role": "staff",
+      "id": "2000"
+    },
+    {
+      "id": "01cb",
+      "name": "Monjur Morshed",
+      "email": "monjurmorshedosama75@gmail.com",
+      "password": "monjur123",
+      "role": "user"
+    }
+  ],
+  "message": "User information fetched successfully",
+  "services": [
+    {
+      "_id": "67d3bec02f5863e369731346",
+      "name": "AC Doctor",
+      "category": "AC Repair Services",
+      "description": "AC Doctor involves evaluating the energy usage of your air conditioning system to identify any inefficiencies and recommend measures to improve energy efficiency. This service helps optimize your AC's performance while reducing energy costs.",
+      "image": "https://i.ibb.co/ycRxH2VZ/AC-Doctor.jpg",
+      "id": "c844"
+    },
+    {
+      "_id": "67d3c1582f5863e369731347",
+      "name": "AC Servicing",
+      "category": "AC Repair Services",
+      "description": "Best AC Servicing",
+      "image": "https://i.ibb.co/yBh0Bfgr/AC-Servicing.jpg",
+      "id": "90fd"
+    },
+    {
+      "_id": "67d3c1982f5863e369731348",
+      "name": "Appliance Check-up Combo Package",
+      "category": "Appliance Repair",
+      "description": "Best Appliance Check-up Combo Package",
+      "image": "https://i.ibb.co/3y71M8sb/Appliance-Check-up-Combo-Package.jpg",
+      "id": "eb7b"
+    },
+    {
+      "_id": "68178d0fd9684f1664a44a59",
+      "name": "Special Cleaning Combo Package",
+      "category": "Cleaning Solution",
+      "description": "What to Expect? ·      \n1.Kitchen Deep Cleaning +1 Bathroom Regular Cleaning ·      \n2.Background checked and trained cleaners ·      \n3.Complete sanitation and cleaning of kitchen ·      \n4.Environment friendly chemicals are and machines will be used ·      \n5.Thorough cleaning of bathroom surfaces with a mopping stick Toilet Cleaning ·      \n5. Basic Sanitizing and cleaning the toilet bowl, seat, and exterior surfaces with basic detergent and antiseptic without any high Chemical use. ·     \n6.Mopping the bathroom floor with basic detergent and antiseptic to remove dirt and stains. ·      \n7.Basic Cleaning and sanitizing bathroom basin without any high Chemical use. ·      \n8.  Basic Cleaning and sanitizing of bathroom grill and inside window cleaning without any high Chemical use. ·      \n9.Basic Cleaning of bathtub and shower corner cleaning without any high Chemical use if applicable.\n\nAreas and Items to be covered:\n1.Kitchen and 1 Bathroom: ·      \n2.Windows and ventilators ·      \n3.Exhaust fans ·      \n4.Kitchen tiles ·      \n5.Switchboards ·      \n6.Sink and Wash Zone ·      \n7.Gas stoves/ Burners ·      \n8.Kitchen Appliances like Refrigerator, Microwave,\n9.Toaster, Oven externally ·      \n10.Doors and door handles ·      \n11.All Stainless Steel and Chrome Fittings ·      \n12.Floor washing, wiping, and disinfection ·      \n13.Storage Cabinets ·      \n14.Surface Mopping ·      \n15.Toilet Cleaning ·      \n16.Bathroom Mirror Cleaning ·      \n17.Floor Cleaning ·      \n18.Bathroom Basin Cleaning ·      \n19.Bathroom Window & Grill Cleaning ·      \n20.Bathtub & Shower Corner",
+      "image": "https://i.ibb.co/sv04KQ5q/Special-Cleaning-Combo-Package.jpg",
+      "id": "884d"
+    }
+  ],
+  "categories": [
+    {
+      "_id": "67d26f0e33646d2b840f8c37",
+      "name": "AC Repair Services"
+    },
+    {
+      "_id": "67d26f1933646d2b840f8c38",
+      "name": "Appliance Repair"
+    },
+    {
+      "_id": "67d26f2133646d2b840f8c39",
+      "name": "Cleaning Solution"
+    },
+    {
+      "_id": "67d26f2933646d2b840f8c3a",
+      "name": "Beauty & Wellness"
+    },
+    {
+      "_id": "67d26f3033646d2b840f8c3b",
+      "name": "Maid Service"
+    },
+    {
+      "_id": "67d26f3633646d2b840f8c3c",
+      "name": "Shifting"
+    },
+    {
+      "_id": "67d3b0271871b8478538ae51",
+      "name": "Men's Care & Salon"
+    },
+    {
+      "_id": "67d3b12e1871b8478538ae55",
+      "name": "Health & Care Special Offer"
+    },
+    {
+      "_id": "67d3b1411871b8478538ae56",
+      "name": "Electronics & Gadgets Repair"
+    }
+  ]
+}

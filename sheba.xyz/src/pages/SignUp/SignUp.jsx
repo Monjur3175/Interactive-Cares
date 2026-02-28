@@ -35,7 +35,7 @@ export default function SignUp() {
 
     const fetchData = async () => {
       try {
-        const response = await fetch("https://sheba-xyz.onrender.com/users", {
+        const response = await fetch("http://localhost:3000/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

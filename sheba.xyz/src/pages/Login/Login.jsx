@@ -21,39 +21,77 @@ export default function Login() {
   } = useForm();
 
   const onSubmit = (data) => processLogin(data);
-  const processLogin = (FormData) => {
+  const processLogin = async (FormData) => {
     const loginBtn = document.getElementById("loginBtn");
     loginBtn.disabled = true;
     loginBtn.innerText = "Processing Login...";
 
-    const fetchData = async () => {
-      try {
-        const response = await fetch("https://sheba-xyz.onrender.com/user", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(FormData),
-        });
-        const result = await response.json();
-        if (response.status) {
-          setUser(result.user);
-          setLoginError("");
-          localStorage.setItem("uId", result.user._id);
-          result.user.role === "user" && navigate("/services");
-          result.user.role === "admin" && navigate("/admin");
+    try {
+      const response = await fetch(
+        `http://localhost:3000/users?email=${FormData.email}&password=${FormData.password}`,
+      );
+
+      const users = await response.json();
+
+      if (users.length > 0) {
+        const loggedUser = users[0];
+
+        setUser(loggedUser);
+        setLoginError("");
+        localStorage.setItem("uId", loggedUser.id);
+
+        if (loggedUser.role === "admin") {
+          navigate("/admin");
         } else {
-          setLoginError(result.message);
-          document.getElementById("loginForm").reset();
-          loginBtn.disabled = false;
-          loginBtn.innerText = "Login";
+          navigate("/services");
         }
-      } catch (error) {
-        console.error("Error fetching user data:", error);
+      } else {
+        setLoginError("Invalid email or password");
+        document.getElementById("loginForm").reset();
       }
-    };
-    fetchData();
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      setLoginError("Something went wrong");
+    }
+
+    loginBtn.disabled = false;
+    loginBtn.innerText = "Login";
   };
+
+  //THis is for real API
+  // const processLogin = (FormData) => {
+  //   const loginBtn = document.getElementById("loginBtn");
+  //   loginBtn.disabled = true;
+  //   loginBtn.innerText = "Processing Login...";
+
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(`sheba-xyz-backend.onrender.com/login`, {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(FormData),
+  //       });
+  //       const result = await response.json();
+  //       if (response.status) {
+  //         setUser(result.user);
+  //         setLoginError("");
+  //         localStorage.setItem("uId", result.user._id);
+  //         result.user.role === "user" && navigate("/services");
+  //         result.user.role === "admin" && navigate("/admin");
+  //       } else {
+  //         setLoginError(result.message);
+  //         document.getElementById("loginForm").reset();
+  //         loginBtn.disabled = false;
+  //         loginBtn.innerText = "Login";
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching user data:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // };
   function handleError() {
     setLoginError("");
   }
@@ -97,7 +135,10 @@ export default function Login() {
         </form>
         <p className="text-rose-700 mt-2 font-bold">{LoginError}</p>
         <p>
-          Don't Have an Account <Link to="/signup" className="underline">Register as User</Link>
+          Don't Have an Account{" "}
+          <Link to="/signup" className="underline">
+            Register as User
+          </Link>
         </p>
       </div>
     </div>
