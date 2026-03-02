@@ -2,6 +2,8 @@ import { useParams } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import StaffAbout from "../../components/Staffs/StaffAbout";
+import StaffReview from "../../components/Staffs/StaffReview";
 
 export default function StaffDetails() {
   const { id } = useParams();
@@ -20,12 +22,11 @@ export default function StaffDetails() {
       fetchData();
     }
   }, [id, setstaff, staff.name]);
-
   const [toggle, setToggle] = useState(false);
-  const [tab, setTab] = useState("details");
+  const [tab, setTab] = useState("about");
   const handleToggle = (tabName) => {
     if (tab !== tabName) {
-      setToggle((curr) => !curr);
+      setToggle(true);
       setTab(tabName);
     }
   };
@@ -56,13 +57,25 @@ export default function StaffDetails() {
         </div>
 
         <div className="mt-5 pt-5 md:pt-0 gap-5 flex items-center justify-center ">
-            <button onClick={()=>handleToggle("about")} className={`text-lg font-bold tracking-wide ${toggle && tab === "about" ? "text-amber-500" : "text-gray-700"}`}>
-              About
-            </button>
-            <button onClick={()=>handleToggle("reviews")} className={`text-lg font-bold tracking-wide ${toggle && tab === "reviews" ? "text-amber-500" : "text-gray-700"}`}>
-              Ratings and Reviews
-            </button>
+          <button
+            onClick={() => handleToggle("about")}
+            className={`text-lg font-bold tracking-wide border-b-2 ${toggle && tab === "about" ? "text-amber-500" : "hover:border-red-700"}`}
+          >
+            About
+          </button>
+          <button
+            onClick={() => handleToggle("reviews")}
+            className={`text-lg font-bold tracking-wide border-b-2 ${toggle && tab === "reviews" ? "text-amber-500" : "hover:border-red-700"}`}
+          >
+            Ratings and Reviews
+          </button>
         </div>
+        {
+          staff.name && ( tab === "about"  && <StaffAbout staff={staff} />  )
+        }
+        {
+          staff.name && ( tab === "reviews"  && <StaffReview staff={staff} />  )
+        }
       </div>
     </div>
   );
