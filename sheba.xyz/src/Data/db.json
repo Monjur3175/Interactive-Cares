@@ -161,5 +161,27 @@
       "_id": "67d3b1411871b8478538ae56",
       "name": "Electronics & Gadgets Repair"
     }
+  ],
+  "staffs": [
+    {
+      "_id": "68065b84400f5d27e7b0cf5a",
+      "name": "Tapan",
+      "bio": "SHei staff",
+      "location": "Dhaka",
+      "rate": "1000",
+      "details": "10 years of experience",
+      "services": ["AC Doctor"],
+      "image": "https://caricom.org/wp-content/uploads/Floyd-Morris-Remake-1024x879-1.jpg"
+    },
+    {
+      "_id": "68065dd1400f5d27e7b0cf5b",
+      "name": "Eftykhar Rahman",
+      "bio": "5 Years of Professional Working Experience",
+      "location": "Banani",
+      "rate": "500",
+      "details": "He is responsible for providing high-quality, on-site services related to the maintenance, cleaning, and basic troubleshooting of air conditioning units and other HVAC systems. This role primarily focuses on ensuring optimal performance, energy efficiency, and indoor air quality for our clients through thorough cleaning and preventative maintenance.",
+      "services": ["AC Doctor", "AC Servicing"],
+      "image": "https://i.ibb.co/fGd8nF5j/Passport-Size-Photo-removebg-preview.png"
+    }
   ]
 }

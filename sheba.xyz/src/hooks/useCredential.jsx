@@ -4,6 +4,9 @@ const useCredential = () => {
   const [user, setUser] = useState({});
   const [services, setServices] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [Service, setService] = useState({});
+  const [staffs, setStaffs] = useState([]);
+  const [staff, setStaff] = useState([]);
 
   const userData = async () => {
     try {
@@ -39,6 +42,18 @@ const useCredential = () => {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/staffs`);
+        const result = await response.json();
+        setStaffs(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const logout = () => {
     localStorage.removeItem("uId");
@@ -53,6 +68,12 @@ const useCredential = () => {
     setServices,
     categories,
     setCategories,
+    Service,
+    setService,
+    staffs,
+    setStaffs,
+    staff,
+    setStaff,
   };
 };
 export default useCredential;
