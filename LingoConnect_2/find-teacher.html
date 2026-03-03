@@ -23,6 +23,7 @@
             
             <nav class="nav">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
                 <a href="find-teacher.html" class="nav-link active">Find Teacher</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="author.html" class="nav-link">Author</a>
@@ -88,7 +89,7 @@
         <!-- Teachers Grid -->
         <section class="section">
             <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                <div id="teachers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
                     <!-- Teacher Card 1 -->
                     <div class="testimonial-card">
                         <div class="testimonial-author">
@@ -105,7 +106,7 @@
                         <p class="testimonial-text">"Professional Spanish teacher specializing in conversational fluency and business Spanish. Let's make learning fun!"</p>
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$25/hour</div>
-                            <a href="booking-maria.html" class="btn btn-primary">Book Lesson</a>
+                            <button onclick="bookTeacher('Maria Rodriguez', 'Spanish', '25', 'Images/Maria Rodriguez.png', 'DELE Certified', '5+ years', 'Professional Spanish teacher specializing in conversational fluency and business Spanish.', 'Madrid, Spain')" class="btn btn-primary">Book Lesson</button>
                         </div>
                     </div>
                     
@@ -125,7 +126,7 @@
                         <p class="testimonial-text">"Experienced French tutor helping students achieve fluency through personalized lessons and cultural immersion."</p>
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$30/hour</div>
-                            <a href="booking-pierre.html" class="btn btn-primary">Book Lesson</a>
+                            <button onclick="bookTeacher('Pierre Dubois', 'French', '30', 'Images/pierre dubois.jpg', 'DALF Certified', '8+ years', 'Experienced French tutor helping students achieve fluency through personalized lessons and cultural immersion.', 'Paris, France')" class="btn btn-primary">Book Lesson</button>
                         </div>
                     </div>
                     
@@ -145,7 +146,7 @@
                         <p class="testimonial-text">"Native Japanese speaker specializing in business Japanese and exam preparation. Let's master Japanese together!"</p>
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$35/hour</div>
-                            <a href="booking-hiroshi.html" class="btn btn-primary">Book Lesson</a>
+                            <button onclick="bookTeacher('Hiroshi Tanaka', 'Japanese', '35', 'Images/Hiroshi Tanaka.png', 'JLPT N1', '6+ years', 'Native Japanese speaker specializing in business Japanese and exam preparation.', 'Tokyo, Japan')" class="btn btn-primary">Book Lesson</button>
                         </div>
                     </div>
                     
@@ -165,7 +166,7 @@
                         <p class="testimonial-text">"Patient German teacher focused on grammar fundamentals and conversational practice for all levels."</p>
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$28/hour</div>
-                            <a href="booking-anna.html" class="btn btn-primary">Book Lesson</a>
+                            <button onclick="bookTeacher('Anna Schmidt', 'German', '28', 'Images/Anna Schmidt.png', 'Goethe Certified', '7+ years', 'Patient German teacher focused on grammar fundamentals and conversational practice.', 'Berlin, Germany')" class="btn btn-primary">Book Lesson</button>
                         </div>
                     </div>
                     
@@ -185,7 +186,7 @@
                         <p class="testimonial-text">"Expert in Mandarin Chinese with focus on business communication and cultural understanding. Start your journey today!"</p>
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$32/hour</div>
-                            <a href="booking-li.html" class="btn btn-primary">Book Lesson</a>
+                            <button onclick="bookTeacher('Li Wei', 'Chinese', '32', 'Images/Li Wei.png', 'HSK Certified', '5+ years', 'Expert in Mandarin Chinese with focus on business communication.', 'Beijing, China')" class="btn btn-primary">Book Lesson</button>
                         </div>
                     </div>
                     
@@ -205,14 +206,14 @@
                         <p class="testimonial-text">"Passionate Italian teacher making language learning enjoyable through conversation and cultural exploration."</p>
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$26/hour</div>
-                            <a href="booking-isabella.html" class="btn btn-primary">Book Lesson</a>
+                            <button onclick="bookTeacher('Isabella Romano', 'Italian', '26', 'Images/Isabella Romano.png', 'CILS Certified', '4+ years', 'Passionate Italian teacher making language learning enjoyable.', 'Rome, Italy')" class="btn btn-primary">Book Lesson</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Load More Button -->
                 <div style="text-align: center; margin-top: 48px;">
-                    <button class="btn btn-outline btn-large">Load More Teachers</button>
+                    <button onclick="loadMoreTeachers()" class="btn btn-outline btn-large">Load More Teachers</button>
                 </div>
             </div>
         </section>
@@ -271,5 +272,145 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Additional teachers data
+        const additionalTeachers = [
+            {
+                name: "Ahmed Hassan",
+                language: "Arabic",
+                level: "Native",
+                experience: "6+ years",
+                certification: "Al-Azahar Certified",
+                price: "27",
+                image: "Images/Ahmed Hassan.png",
+                description: "Native Arabic speaker specializing in Modern Standard Arabic and Quranic Arabic.",
+                location: "Cairo, Egypt"
+            },
+            {
+                name: "Sofia Petrov",
+                language: "Russian",
+                level: "Native",
+                experience: "5+ years",
+                certification: "TORFL Certified",
+                price: "24",
+                image: "Images/Sofia Petrov.jpg",
+                description: "Experienced Russian tutor focusing on business Russian and cultural immersion.",
+                location: "Moscow, Russia"
+            },
+            {
+                name: "Carlos Silva",
+                language: "Portuguese",
+                level: "Native",
+                experience: "7+ years",
+                certification: "CELPE-Bras",
+                price: "29",
+                image: "Images/Carlos Silva.jpg",
+                description: "Brazilian Portuguese expert with emphasis on conversational fluency and business communication.",
+                location: "São Paulo, Brazil"
+            },
+            {
+                name: "Kim Min-jun",
+                language: "Korean",
+                level: "Native",
+                experience: "4+ years",
+                certification: "TOPIK Level 6",
+                price: "31",
+                image: "Images/Kim Min-jun.jpg",
+                description: "Korean native speaker specializing in K-culture, business Korean, and TOPIK preparation.",
+                location: "Seoul, South Korea"
+            },
+            {
+                name: "Emma Thompson",
+                language: "English",
+                level: "Native",
+                experience: "8+ years",
+                certification: "TEFL Certified",
+                price: "33",
+                image: "Images/Emma Thompson.jpg",
+                description: "Professional English teacher with expertise in business English and IELTS preparation.",
+                location: "London, UK"
+            },
+            {
+                name: "Raj Patel",
+                language: "Hindi",
+                level: "Native",
+                experience: "5+ years",
+                certification: "University Certified",
+                price: "22",
+                image: "Images/Raj Patel.jpg",
+                description: "Native Hindi speaker focusing on conversational Hindi and cultural understanding.",
+                location: "Mumbai, India"
+            },
+            {
+                name: "Lars Andersen",
+                language: "Danish",
+                level: "Native",
+                experience: "6+ years",
+                certification: "PD3 Certified",
+                price: "30",
+                image: "Images/Lars Andersen.jpg",
+                description: "Danish native tutor specializing in business Danish and Scandinavian culture.",
+                location: "Copenhagen, Denmark"
+            }
+        ];
+
+        let currentTeacherIndex = 0;
+
+        function bookTeacher(name, language, price, image, certification, experience, description, location) {
+            // Redirect to teacher booking page with parameters
+            const params = new URLSearchParams({
+                teacher: name,
+                language: language,
+                price: price,
+                image: image,
+                certification: certification,
+                experience: experience,
+                description: description,
+                location: location
+            });
+            window.location.href = `teacher-booking.html?${params.toString()}`;
+        }
+
+        function loadMoreTeachers() {
+            const grid = document.getElementById('teachers-grid');
+            const teachersToLoad = 3; // Load 3 teachers at a time
+            
+            for (let i = 0; i < teachersToLoad && currentTeacherIndex < additionalTeachers.length; i++) {
+                const teacher = additionalTeachers[currentTeacherIndex];
+                const teacherCard = createTeacherCard(teacher);
+                grid.appendChild(teacherCard);
+                currentTeacherIndex++;
+            }
+            
+            // Hide button if all teachers are loaded
+            if (currentTeacherIndex >= additionalTeachers.length) {
+                document.querySelector('.btn-outline.btn-large').style.display = 'none';
+            }
+        }
+
+        function createTeacherCard(teacher) {
+            const card = document.createElement('div');
+            card.className = 'testimonial-card';
+            card.innerHTML = `
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background: url('${teacher.image}') center/cover;"></div>
+                    <div class="author-info">
+                        <div class="author-name">${teacher.name}</div>
+                        <div class="author-learning">${teacher.language} • ${teacher.level}</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                    <span style="background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-size: 12px;">${teacher.experience}</span>
+                    <span style="background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-size: 12px;">${teacher.certification}</span>
+                </div>
+                <p class="testimonial-text">"${teacher.description}"</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+                    <div style="font-size: 18px; font-weight: 600; color: #0f7ff0;">$${teacher.price}/hour</div>
+                    <button onclick="bookTeacher('${teacher.name}', '${teacher.language}', '${teacher.price}', '${teacher.image}', '${teacher.certification}', '${teacher.experience}', '${teacher.description}', '${teacher.location}')" class="btn btn-primary">Book Lesson</button>
+                </div>
+            `;
+            return card;
+        }
+    </script>
 </body>
 </html>
