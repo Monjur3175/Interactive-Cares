@@ -7,21 +7,21 @@ import StaffReview from "../../components/Staffs/StaffReview";
 
 export default function StaffDetails() {
   const { id } = useParams();
-  const { staff, setstaff } = useAuth();
+  const { staff, setStaff } = useAuth();
   useEffect(() => {
     if (!staff.name) {
       const fetchData = async () => {
         try {
           const response = await fetch(`http://localhost:3000/staffs/${id}`);
           const result = await response.json();
-          setstaff(result);
+          setStaff(result);
         } catch (error) {
           console.error("Error fetching staff details:", error);
         }
       };
       fetchData();
     }
-  }, [id, setstaff, staff.name]);
+  }, [id, setStaff, staff.name]);
   const [toggle, setToggle] = useState(false);
   const [tab, setTab] = useState("about");
   const handleToggle = (tabName) => {
@@ -51,7 +51,7 @@ export default function StaffDetails() {
             <p className="text-sm text-gray-700 mt-2">{staff.bio}</p>
             <p className="text-sm text-gray-700 mt-2">{staff.location}</p>
             <p className="text-sm text-gray-700 mt-2">
-              {Number(staff.rate).toLocaleString()}
+              ${Number(staff.rate).toLocaleString()}
             </p>
           </div>
         </div>

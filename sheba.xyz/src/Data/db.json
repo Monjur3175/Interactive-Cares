@@ -89,7 +89,6 @@
       "role": "user"
     }
   ],
-  "message": "User information fetched successfully",
   "services": [
     {
       "_id": "67d3bec02f5863e369731346",
@@ -171,7 +170,8 @@
       "rate": "1000",
       "details": "10 years of experience",
       "services": ["AC Doctor"],
-      "image": "https://caricom.org/wp-content/uploads/Floyd-Morris-Remake-1024x879-1.jpg"
+      "image": "https://caricom.org/wp-content/uploads/Floyd-Morris-Remake-1024x879-1.jpg",
+      "id": "68065b84400f5d27e7b0cf5a"
     },
     {
       "_id": "68065dd1400f5d27e7b0cf5b",
@@ -181,7 +181,40 @@
       "rate": "500",
       "details": "He is responsible for providing high-quality, on-site services related to the maintenance, cleaning, and basic troubleshooting of air conditioning units and other HVAC systems. This role primarily focuses on ensuring optimal performance, energy efficiency, and indoor air quality for our clients through thorough cleaning and preventative maintenance.",
       "services": ["AC Doctor", "AC Servicing"],
+      "id": "68065dd1400f5d27e7b0cf5b",
       "image": "https://i.ibb.co/fGd8nF5j/Passport-Size-Photo-removebg-preview.png"
+    }
+  ],
+  "slots": [
+    {
+      "_id": "681a104071189f93ab62e2a0",
+      "label": "Early Morning Slot",
+      "start_time": "08:00",
+      "end_time": "09:00"
+    },
+    {
+      "_id": "681a106771189f93ab62e2a1",
+      "label": "Morning Slot",
+      "start_time": "09:00",
+      "end_time": "10:00"
+    },
+    {
+      "_id": "681a107871189f93ab62e2a2",
+      "label": "Noon Slot",
+      "start_time": "12:00",
+      "end_time": "14:00"
+    },
+    {
+      "_id": "681a108b71189f93ab62e2a3",
+      "label": "Evening Slot",
+      "start_time": "16:00",
+      "end_time": "18:00"
+    },
+    {
+      "_id": "681a109b71189f93ab62e2a4",
+      "label": "Night Slot",
+      "start_time": "20:00",
+      "end_time": "22:00"
     }
   ]
 }

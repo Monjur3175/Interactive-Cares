@@ -7,6 +7,7 @@ const useCredential = () => {
   const [Service, setService] = useState({});
   const [staffs, setStaffs] = useState([]);
   const [staff, setStaff] = useState([]);
+  const [slots, setSlots] = useState([]);
 
   const userData = async () => {
     try {
@@ -54,6 +55,18 @@ const useCredential = () => {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/slots`);
+        const result = await response.json();
+        setSlots(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const logout = () => {
     localStorage.removeItem("uId");
@@ -74,6 +87,8 @@ const useCredential = () => {
     setStaffs,
     staff,
     setStaff,
+    slots,
+    setSlots,
   };
 };
 export default useCredential;
